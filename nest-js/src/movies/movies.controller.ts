@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Delete, Post, Patch } from '@nestjs/common';
+import { Controller, Get, Param, Delete, Post, Patch, Body } from '@nestjs/common';
 
 @Controller('movies')
 export class MoviesController {
@@ -13,8 +13,9 @@ export class MoviesController {
         return `This will return one movies with the id: ${movieId}`;
     }
 
-    @Post("/:id")
-    craete(){
+    @Post()
+    craete(@Body() movieData){
+        console.log(movieData)
         return 'This will create a movie'
     }
 
