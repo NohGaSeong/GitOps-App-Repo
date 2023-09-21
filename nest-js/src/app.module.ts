@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { MoviesController } from './movie/movies.controller';
-import { MoviesService } from './movie/movies.service'
+import { MoviesController } from './movies/movies.controller';
+import { MoviesService } from './movies/movies.service'
 
 @Module({ 
   imports: [],

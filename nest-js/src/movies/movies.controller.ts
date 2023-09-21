@@ -1,4 +1,5 @@
-import { Controller, Get, Param, Delete, Post, Patch, Body, Query } from '@nestjs/common';
+import { Controller, Get, Param, Delete, Post, Patch, Body, Query, Req } from '@nestjs/common';
+import { Request } from 'express';
 
 @Controller('movies')
 export class MoviesController {
@@ -19,9 +20,8 @@ export class MoviesController {
     }
 
     @Post()
-    craete(@Body() movieData){
-        console.log(movieData)
-        return movieData
+    create(@Body() data){
+        return data
     }
 
     @Delete(':id')
